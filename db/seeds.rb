@@ -16,12 +16,20 @@ Book.create!([{
     finished_on: 10.days.ago
   },
   {
+    title: "Hyperion 2",
+    author: "Dan Simmons 2",
+    description: "Sequel",
+    amazon_id: "0553283685",
+    rating: 5,
+    finished_on: 1.days.ago
+  },
+  {
     title: "Jony Ive: The Genius Behing Apple's Greatest Products",
     author: "Leander Kahney",
     description: "Even though I respect Ive, I felt this biography only hit skin deep.",
     amazon_id: "159184617X",
     rating: 4,
-    finished_on: 1.day.ago
+    finished_on: nil
   }
   ]
 )
