@@ -6,6 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Book.destroy_all
+Genre.destroy_all
+
+fiction = Genre.create!(name: 'Fiction')
+non_fiction = Genre.create!(name: 'Non-Fiction')
+apple = Genre.create!(name: 'Apple')
 
 Book.create!([{
     title: "Hyperion",
@@ -13,7 +18,8 @@ Book.create!([{
     description: "Probable my favorite science fiction book",
     amazon_id: "0553283685",
     rating: 5,
-    finished_on: 10.days.ago
+    finished_on: 10.days.ago,
+    genres: [fiction]
   },
   {
     title: "Hyperion 2",
@@ -21,7 +27,8 @@ Book.create!([{
     description: "Sequel",
     amazon_id: "0553283685",
     rating: 5,
-    finished_on: 1.days.ago
+    finished_on: 1.days.ago,
+    genres: [fiction]
   },
   {
     title: "Jony Ive: The Genius Behing Apple's Greatest Products",
@@ -29,7 +36,8 @@ Book.create!([{
     description: "Even though I respect Ive, I felt this biography only hit skin deep.",
     amazon_id: "159184617X",
     rating: 4,
-    finished_on: nil
+    finished_on: nil,
+    genres: [non_fiction, apple]
   }
   ]
 )
